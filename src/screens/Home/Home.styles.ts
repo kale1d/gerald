@@ -1,12 +1,11 @@
 import {StyleSheet} from 'react-native';
 import {Colors} from '../../utils/colors';
-
 export const styles = StyleSheet.create({
-  drawerStyle: {
-    backgroundColor: Colors.DarkPurple,
-    width: '50%',
+  container: {
+    flex: 1,
+    padding: 24,
   },
-  sceneContainer: {
+  wrapper: {
     flex: 1,
     backgroundColor: Colors.DarkPurple,
   },

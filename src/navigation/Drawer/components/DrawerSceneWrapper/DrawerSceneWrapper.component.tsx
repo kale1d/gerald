@@ -46,10 +46,10 @@ export const DrawerSceneWrapper = ({children}: {children: React.ReactNode}) => {
   });
 
   return (
-    <View style={[styles.flex1, styles.background]}>
-      <Animated.View style={[styles.container, animatedStyle]}>
-        <SafeAreaView>{children}</SafeAreaView>
-      </Animated.View>
-    </View>
+    // <View style={[styles.flex1, styles.background]}>
+    <Animated.View style={[styles.container, animatedStyle]}>
+      <SafeAreaView style={styles.flex1}>{children}</SafeAreaView>
+    </Animated.View>
+    // </View>
   );
 };

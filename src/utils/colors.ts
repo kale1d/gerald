@@ -6,5 +6,6 @@ export const Colors = {
   Melon: '#f6a9a5',
   DarkPurple: '#190B28',
   Transparent: 'transparent',
+  TeaGreen: '#cce8cc',
   White: '#f4f4f4',
 };

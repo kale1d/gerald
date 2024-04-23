@@ -11,14 +11,30 @@ export const DrawerSceneWrapper = ({children}: {children: React.ReactNode}) => {
   const progress = useDrawerProgress();
 
   const animatedStyle = useAnimatedStyle(() => {
-    const interpolateDegrees = interpolate(progress.value, [0, 1], [0, -4]);
+    const interpolateDegrees = interpolate(
+      progress.value,
+      [0, 1],
+      [0, -3],
+      'clamp',
+    );
     const interpolateTranslateX = interpolate(
       progress.value,
       [0, 1],
       [0, Platform.OS === 'android' ? width * 0.55 : 50],
+      'clamp',
     );
-    const interpolateTranslateY = interpolate(progress.value, [0, 1], [0, 40]);
-    const interpolateBorder = interpolate(progress.value, [0, 1], [0, 20]);
+    const interpolateTranslateY = interpolate(
+      progress.value,
+      [0, 1],
+      [0, 50],
+      'clamp',
+    );
+    const interpolateBorder = interpolate(
+      progress.value,
+      [0, 1],
+      [0, 30],
+      'clamp',
+    );
     return {
       transform: [
         {rotate: interpolateDegrees + 'deg'},

@@ -6,13 +6,17 @@
  */
 
 import React from 'react';
-import {Text, View} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {Navigator} from './src/navigation/navigator';
 
 function App(): React.JSX.Element {
   return (
-    <View>
-      <Text>Hola</Text>
-    </View>
+    <GestureHandlerRootView style={{flex: 1}}>
+      <SafeAreaProvider>
+        <Navigator />
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }
 

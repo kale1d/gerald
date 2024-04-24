@@ -7,8 +7,10 @@ import {styles} from './Drawer.styles';
 import {Colors} from '../../utils/colors';
 import {CustomDrawerContent} from './components/CustomDrawerContent';
 import {BottomTabNavigation} from '../BottomTabNavigator/BottomTab.navigation';
+import {NotificationScreen} from '../../screens/Notification';
+import {DRAWER_ITEMS, DrawerItemsParamList} from './Drawer.types';
 
-const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator<DrawerItemsParamList>();
 
 export const DrawerContainer = () => {
   const customDrawer = (props: DrawerContentComponentProps) => (
@@ -17,7 +19,7 @@ export const DrawerContainer = () => {
   return (
     <Drawer.Navigator
       drawerContent={props => customDrawer(props)}
-      initialRouteName="Home"
+      initialRouteName={DRAWER_ITEMS.HOME}
       screenOptions={{
         headerShown: false,
         drawerStyle: styles.drawerStyle,
@@ -28,8 +30,11 @@ export const DrawerContainer = () => {
         drawerInactiveTintColor: Colors.Melon,
         overlayColor: Colors.Transparent,
       }}>
-      <Drawer.Screen name="Home" component={BottomTabNavigation} />
-      <Drawer.Screen name="Notifications" component={BottomTabNavigation} />
+      <Drawer.Screen name={DRAWER_ITEMS.HOME} component={BottomTabNavigation} />
+      <Drawer.Screen
+        name={DRAWER_ITEMS.NOTIFICATIONS}
+        component={NotificationScreen}
+      />
     </Drawer.Navigator>
   );
 };

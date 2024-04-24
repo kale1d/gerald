@@ -1,21 +1,17 @@
 import React from 'react';
 import {DrawerSceneWrapper} from '../../navigation/Drawer/components/DrawerSceneWrapper';
-import {Button, View} from 'react-native';
+import {Text, View} from 'react-native';
+import {styles} from './Contact.styles';
 import {Icon} from '../components/Icon';
-import {styles} from './SecondHomeScreen.styles';
-import {STACK_SCREENS} from '../../navigation/HomeStack/HomeStack.types';
 import {AppNavigationProp} from '../../navigation/navigation.types';
 
-export const SecondHomeScreen: React.FC<AppNavigationProp> = ({navigation}) => {
+export const ContactScreen: React.FC<AppNavigationProp> = ({navigation}) => {
   return (
     <View style={styles.wrapper}>
       <DrawerSceneWrapper>
         <View style={styles.container}>
           <Icon onPress={() => navigation.toggleDrawer()} />
-          <Button
-            onPress={() => navigation.navigate(STACK_SCREENS.HOME)}
-            title="Go to Home"
-          />
+          <Text>Contact</Text>
         </View>
       </DrawerSceneWrapper>
     </View>

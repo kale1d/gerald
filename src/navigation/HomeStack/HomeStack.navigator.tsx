@@ -11,6 +11,7 @@ export const HomeStack: React.FC = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
+        gestureEnabled: false,
       }}>
       <Stack.Screen name={STACK_SCREENS.HOME} component={HomeScreen} />
       <Stack.Screen name={STACK_SCREENS.HOME2} component={SecondHomeScreen} />

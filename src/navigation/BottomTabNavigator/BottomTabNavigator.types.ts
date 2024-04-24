@@ -1,6 +1,10 @@
 import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
-import {RouteProp} from '@react-navigation/native';
+import {CompositeScreenProps, RouteProp} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
+import {
+  HomeStackParamList,
+  HomeStackScreenProps,
+} from '../HomeStack/HomeStack.types';
 
 export enum BOTTOM_TABS {
   HOME = 'home',
@@ -15,8 +19,13 @@ export type BottomTabRoutes = {
 export type BottomTabNavigationType<RouteName extends keyof BottomTabRoutes> =
   StackNavigationProp<BottomTabRoutes, RouteName>;
 
-export type BottomTabNavigationProps<RouteName extends keyof BottomTabRoutes> =
-  {
-    navigation: BottomTabNavigationProp<BottomTabRoutes, RouteName>;
-    route: RouteProp<BottomTabRoutes, RouteName>;
-  };
+export type BottomTabScreenProps<RouteName extends keyof BottomTabRoutes> = {
+  navigation: BottomTabNavigationProp<BottomTabRoutes, RouteName>;
+  route: RouteProp<BottomTabRoutes, RouteName>;
+};
+
+export type BottomTabParamList = BottomTabRoutes | HomeStackParamList;
+export type CompositeNavProps = CompositeScreenProps<
+  BottomTabScreenProps<keyof BottomTabRoutes>,
+  HomeStackScreenProps<keyof HomeStackParamList>
+>;

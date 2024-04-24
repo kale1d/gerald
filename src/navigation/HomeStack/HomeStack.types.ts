@@ -1,3 +1,4 @@
+import {RouteProp} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 
 export enum STACK_SCREENS {
@@ -10,5 +11,7 @@ export type HomeStackParamList = {
   [STACK_SCREENS.HOME2]: undefined;
 };
 
-export type HomeStackNavigationProp<Route extends keyof HomeStackParamList> =
-  StackNavigationProp<HomeStackParamList, Route>;
+export type HomeStackScreenProps<RouteName extends keyof HomeStackParamList> = {
+  navigation: StackNavigationProp<HomeStackParamList, RouteName>;
+  route: RouteProp<HomeStackParamList, RouteName>;
+};

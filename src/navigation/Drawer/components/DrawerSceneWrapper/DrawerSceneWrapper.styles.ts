@@ -6,10 +6,13 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   background: {
-    backgroundColor: Colors.LavenderPink,
+    backgroundColor: Colors.DarkPurple,
   },
   container: {
     flex: 1,
     backgroundColor: Colors.White,
+  },
+  padding24: {
+    padding: 24,
   },
 });

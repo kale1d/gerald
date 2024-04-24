@@ -4,8 +4,10 @@ import {Text, View} from 'react-native';
 import {styles} from './Contact.styles';
 import {Icon} from '../components/Icon';
 import {AppNavigationProp} from '../../navigation/navigation.types';
+import {useNavigation} from '@react-navigation/native';
 
-export const ContactScreen: React.FC<AppNavigationProp> = ({navigation}) => {
+export const ContactScreen: React.FC = () => {
+  const navigation = useNavigation<AppNavigationProp>();
   return (
     <View style={styles.wrapper}>
       <DrawerSceneWrapper>

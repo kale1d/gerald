@@ -12,7 +12,7 @@ const BottomTab = createBottomTabNavigator<BottomTabRoutes>();
 
 const tabs = [{name: 'Home'}, {name: 'Contact'}];
 
-export const BottomTabNavigation = () => {
+export const BottomTabNavigation: React.FC = () => {
   const customTab = (props: BottomTabBarProps) => (
     <CustomTab {...{tabs, ...props}} />
   );

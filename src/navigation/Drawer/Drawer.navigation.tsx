@@ -12,7 +12,7 @@ import {DRAWER_ITEMS, DrawerItemsParamList} from './Drawer.types';
 
 const Drawer = createDrawerNavigator<DrawerItemsParamList>();
 
-export const DrawerContainer = () => {
+export const DrawerContainer: React.FC = () => {
   const customDrawer = (props: DrawerContentComponentProps) => (
     <CustomDrawerContent props={props} />
   );

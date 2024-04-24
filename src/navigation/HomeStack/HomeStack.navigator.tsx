@@ -13,8 +13,8 @@ export const HomeStack: React.FC = () => {
         headerShown: false,
         gestureEnabled: false,
       }}>
-      <Stack.Screen name={STACK_SCREENS.HOME} component={HomeScreen} />
-      <Stack.Screen name={STACK_SCREENS.HOME2} component={SecondHomeScreen} />
+      <Stack.Screen name={STACK_SCREENS.SCREEN1} component={HomeScreen} />
+      <Stack.Screen name={STACK_SCREENS.SCREEN2} component={SecondHomeScreen} />
     </Stack.Navigator>
   );
 };

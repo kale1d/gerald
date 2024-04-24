@@ -1,5 +1,4 @@
 import {DrawerNavigationProp} from '@react-navigation/drawer';
-import {RouteProp} from '@react-navigation/native';
 
 export enum DRAWER_ITEMS {
   HOME = 'Home',
@@ -11,9 +10,7 @@ export type DrawerItemsParamList = {
   [DRAWER_ITEMS.NOTIFICATIONS]: undefined;
 };
 
-export type DrawerNavigationProps<
-  RouteName extends keyof DrawerItemsParamList,
-> = {
-  navigation: DrawerNavigationProp<DrawerItemsParamList>;
-  route: RouteProp<DrawerItemsParamList, RouteName>;
-};
+export type DrawerNavigationProps = DrawerNavigationProp<
+  DrawerItemsParamList,
+  DRAWER_ITEMS.HOME
+>;

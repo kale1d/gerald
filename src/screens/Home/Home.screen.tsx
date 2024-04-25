@@ -1,5 +1,4 @@
 import React, {useCallback} from 'react';
-import {DrawerSceneWrapper} from '../../navigation/Drawer/components/DrawerSceneWrapper';
 import {Button, View} from 'react-native';
 import {styles} from './Home.styles';
 import {STACK_SCREENS} from '../../navigation/HomeStack/HomeStack.types';
@@ -15,11 +14,9 @@ export const HomeScreen: React.FC = () => {
 
   return (
     <View style={styles.wrapper}>
-      <DrawerSceneWrapper>
-        <View style={styles.container}>
-          <Button onPress={goToScreen2} title="Go to Home 2" />
-        </View>
-      </DrawerSceneWrapper>
+      <View style={styles.container}>
+        <Button onPress={goToScreen2} title="Go to Home 2" />
+      </View>
     </View>
   );
 };

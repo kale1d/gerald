@@ -36,7 +36,7 @@ export const DrawerSceneWrapper = ({children}: {children: React.ReactNode}) => {
     );
 
     const interpolateBorder = interpolate(
-      progress.value + 0.1,
+      Platform.OS === 'ios' ? progress.value + 0.1 : progress.value,
       [0, 1],
       [0, 50],
       'clamp',

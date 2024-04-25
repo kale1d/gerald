@@ -10,4 +10,8 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.DarkPurple,
   },
+  labelStyle: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: 16,
+  },
 });

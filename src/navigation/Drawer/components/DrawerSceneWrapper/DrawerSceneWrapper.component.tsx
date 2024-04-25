@@ -6,7 +6,7 @@ import {Dimensions, Platform, View} from 'react-native';
 import {styles} from './DrawerSceneWrapper.styles';
 import {useNavigation} from '@react-navigation/native';
 import {AppNavigationProp} from '../../../navigation.types';
-import {Icon} from './Icon';
+import {Icon} from './components/Icon';
 
 const {width} = Dimensions.get('screen');
 

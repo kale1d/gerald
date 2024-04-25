@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
   titleContainer: {marginTop: 50},
   title: {
     color: Colors.White,
-    fontWeight: 'bold',
+    fontFamily: 'Poppins-SemiBold',
     alignSelf: 'center',
     fontSize: 25,
   },
@@ -24,6 +24,6 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     marginLeft: 5,
     color: Colors.White,
-    fontWeight: '500',
+    fontFamily: 'Poppins-Medium',
   },
 });

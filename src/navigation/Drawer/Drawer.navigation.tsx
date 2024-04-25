@@ -29,6 +29,7 @@ export const DrawerContainer: React.FC = () => {
         drawerActiveTintColor: Colors.White,
         drawerInactiveTintColor: Colors.Melon,
         overlayColor: Colors.Transparent,
+        drawerLabelStyle: styles.labelStyle,
       }}>
       <Drawer.Screen name={DRAWER_ITEMS.HOME} component={BottomTabNavigation} />
       <Drawer.Screen

@@ -4,7 +4,7 @@ import {Colors} from '../../utils/colors';
 export const styles = StyleSheet.create({
   drawerStyle: {
     backgroundColor: Colors.DarkPurple,
-    width: '50%',
+    width: '60%',
   },
   sceneContainer: {
     flex: 1,

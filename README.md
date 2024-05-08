@@ -41,6 +41,8 @@ $ npm run android
 
 ## Thoughts about the challenge 
 
-My first reaction seeing the gif and reading the challenge was "oh this is easy" but when i started to code the drawer and want to animate it, i changed my mind. When i couldn't find the way to animate the drawer of react navigation i tried to made my own, but then when i finished that my mind said "nope, you can do it with the drawer prop" so i watched the gif many times and then i saw it the border radius made the trick there is no overlapping of the screen in the drawer, and everything ended up fine :P.
-After that i wanted to type all the navigation and another round of investigation came up. As a lesson, I learned that nothing is as easy as it seems if you want to do it well.
+Upon encountering the gif and reviewing the challenge, my initial presumption was that it would be straightforward. However, as I delved into the coding process, specifically in attempting to animate the drawer within React Navigation, my perspective shifted. Despite my efforts to construct a custom solution when faced with difficulties in animating the drawer, I eventually circled back to utilizing the provided drawer prop.
 
+Upon closer examination of the gif, I discerned a crucial detail: the border radius played a pivotal role in preventing screen overlap within the drawer. This realization led to a successful resolution of the issue.
+
+Subsequently, when I embarked on typing out all the navigation, I encountered yet another round of investigation. This experience served as a valuable lesson, underscoring the importance of recognizing that tasks are rarely as straightforward as they initially appear, particularly if one endeavors to execute them with precision and excellence.
